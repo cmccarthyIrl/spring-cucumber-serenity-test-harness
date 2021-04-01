@@ -1,0 +1,8 @@
+screenshots/
+logs/
+build/
+target/
+test-output/
+.idea
+*.iml
+
