@@ -26,12 +26,12 @@
         </layout>
     </appender>
 
-    <logger name="com.cmccarthy" level="INFO" additivity="false">
+    <logger name="com.cmccarthy" level="DEBUG" additivity="false">
         <appender-ref ref="FILE-THREAD"/>
         <appender-ref ref="STDOUT"/>
     </logger>
 
-    <root level="INFO">
+    <root level="DEBUG">
         <appender-ref ref="STDOUT"/>
     </root>
 
