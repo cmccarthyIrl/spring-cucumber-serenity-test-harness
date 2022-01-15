@@ -26,7 +26,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <serenity.version>2.3.31</serenity.version>
-        <serenity.maven.version>2.3.31</serenity.maven.version>
+        <jackson.version>2.13.1</jackson.version>
         <serenity.cucumber.version>2.3.31</serenity.cucumber.version>
         <encoding>UTF-8</encoding>
         <tags></tags>
@@ -58,11 +58,6 @@
     </profiles>
 
     <dependencies>
-        <!--        <dependency>-->
-        <!--            <artifactId>rest-assured</artifactId>-->
-        <!--            <groupId>io.rest-assured</groupId>-->
-        <!--            <version>4.3.0</version>-->
-        <!--        </dependency>-->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
@@ -79,35 +74,55 @@
             <groupId>org.springframework.boot</groupId>
             <scope>test</scope>
         </dependency>
-        <!--        <dependency>-->
-        <!--            <artifactId>spring-test</artifactId>-->
-        <!--            <groupId>org.springframework</groupId>-->
-        <!--        </dependency>-->
         <dependency>
             <artifactId>spring-rabbit</artifactId>
             <groupId>org.springframework.amqp</groupId>
-            <version>2.2.11.RELEASE</version>
+            <version>2.3.9</version>
         </dependency>
         <dependency>
-            <artifactId>log4j-api</artifactId>
-            <groupId>org.apache.logging.log4j</groupId>
-            <version>2.13.1</version>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
         </dependency>
         <dependency>
-            <artifactId>log4j-core</artifactId>
-            <groupId>org.apache.logging.log4j</groupId>
-            <version>2.13.1</version>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
         </dependency>
-
-        <!--        Serenity Code-->
-        <!--        Serenity Code-->
-        <!--        Serenity Code-->
-
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.22.0</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.2.3</version>
+            <version>1.2.10</version>
         </dependency>
+        <dependency>
+            <artifactId>commons-io</artifactId>
+            <groupId>commons-io</groupId>
+            <version>2.11.0</version>
+        </dependency>
+        <!--Serenity Dependencies-->
+        <!--Serenity Dependencies-->
+        <!--Serenity Dependencies-->
+
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-core</artifactId>
@@ -158,43 +173,7 @@
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-spring</artifactId>
-            <version>2.2.12</version>
-        </dependency>
-        <dependency>
-            <artifactId>commons-io</artifactId>
-            <groupId>commons-io</groupId>
-            <version>2.6</version>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.12.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-core</artifactId>
-            <version>2.12.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-annotations</artifactId>
-            <version>2.12.0</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>3.6.2</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <artifactId>rest-assured</artifactId>
-            <groupId>io.rest-assured</groupId>
-            <version>3.3.0</version>
+            <version>${serenity.version}</version>
         </dependency>
     </dependencies>
 
