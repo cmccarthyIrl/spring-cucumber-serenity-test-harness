@@ -21,13 +21,13 @@
     </modules>
 
     <properties>
+        <selenium.version>4.1.1</selenium.version>
+        <rest.version>4.2.1</rest.version>
         <activeProfile>prod</activeProfile>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <serenity.version>2.3.31</serenity.version>
-        <jackson.version>2.13.1</jackson.version>
-        <serenity.cucumber.version>2.3.31</serenity.cucumber.version>
+        <serenity.version>3.1.13</serenity.version>
         <encoding>UTF-8</encoding>
         <tags></tags>
         <webdriver.base.url></webdriver.base.url>
@@ -58,71 +58,9 @@
     </profiles>
 
     <dependencies>
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java</artifactId>
-            <version>6.2.2</version>
-        </dependency>
-        <dependency>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <exclusions>
-                <exclusion>
-                    <artifactId>android-json</artifactId>
-                    <groupId>com.vaadin.external.google</groupId>
-                </exclusion>
-            </exclusions>
-            <groupId>org.springframework.boot</groupId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <artifactId>spring-rabbit</artifactId>
-            <groupId>org.springframework.amqp</groupId>
-            <version>2.3.9</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>${jackson.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-core</artifactId>
-            <version>${jackson.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-annotations</artifactId>
-            <version>${jackson.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>3.22.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.10</version>
-        </dependency>
-        <dependency>
-            <artifactId>commons-io</artifactId>
-            <groupId>commons-io</groupId>
-            <version>2.11.0</version>
-        </dependency>
-        <!--Serenity Dependencies-->
-        <!--Serenity Dependencies-->
-        <!--Serenity Dependencies-->
-
+        <!--        Serenity Code-->
+        <!--        Serenity Code-->
+        <!--        Serenity Code-->
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-core</artifactId>
@@ -132,18 +70,11 @@
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-junit</artifactId>
-            <version>${serenity.version}</version>
-            <scope>test</scope>
+            <version>3.1.15</version>
         </dependency>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-screenplay</artifactId>
-            <version>${serenity.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>net.serenity-bdd</groupId>
-            <artifactId>serenity-screenplay-rest</artifactId>
             <version>${serenity.version}</version>
             <scope>test</scope>
         </dependency>
@@ -161,19 +92,113 @@
         </dependency>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
-            <artifactId>serenity-cucumber6</artifactId>
-            <version>${serenity.cucumber.version}</version>
-            <scope>test</scope>
+            <artifactId>serenity-cucumber</artifactId>
+            <version>3.1.13</version>
         </dependency>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-rest-assured</artifactId>
-            <version>2.2.12</version>
+            <version>3.1.13</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>io.rest-assured</groupId>
+                    <artifactId>rest-assured</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-spring</artifactId>
-            <version>${serenity.version}</version>
+            <version>3.1.13</version>
+        </dependency>
+
+        <!--Rest Dependencies-->
+        <!--Rest Dependencies-->
+        <!--Rest Dependencies-->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${rest.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>xml-path</artifactId>
+            <version>${rest.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-path</artifactId>
+            <version>${rest.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>${rest.version}</version>
+        </dependency>
+
+        <!--Test Dependencies-->
+        <!--Test Dependencies-->
+        <!--Test Dependencies-->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.2.3</version>
+        </dependency>
+        <dependency>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>android-json</artifactId>
+                    <groupId>com.vaadin.external.google</groupId>
+                </exclusion>
+            </exclusions>
+            <groupId>org.springframework.boot</groupId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <artifactId>spring-test</artifactId>
+            <groupId>org.springframework</groupId>
+        </dependency>
+        <dependency>
+            <artifactId>spring-rabbit</artifactId>
+            <groupId>org.springframework.amqp</groupId>
+            <version>2.4.2</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.10</version>
+        </dependency>
+        <dependency>
+            <artifactId>commons-io</artifactId>
+            <groupId>commons-io</groupId>
+            <version>2.11.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.13.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.13.1</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.22.0</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -196,32 +221,6 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <version>2.19.1</version>
                 </plugin>
-<!--                <plugin>-->
-<!--                    <artifactId>maven-failsafe-plugin</artifactId>-->
-<!--                    <version>3.0.0-M5</version>-->
-<!--                    <configuration>-->
-<!--                        <includes>-->
-<!--                            <include>**/**/**/*Test.java</include>-->
-<!--                            <include>**/**/**/Test*.java</include>-->
-<!--                            <include>**/**/**/*SuiteTest.java</include>-->
-<!--                            <include>**/**/**/When*.java</include>-->
-<!--                        </includes>-->
-<!--                        <systemPropertyVariables>-->
-<!--                            <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>-->
-<!--                        </systemPropertyVariables>-->
-<!--                        <parallel>classes</parallel>-->
-<!--                        <parallel>methods</parallel>-->
-<!--                        <useUnlimitedThreads>true</useUnlimitedThreads>-->
-<!--                    </configuration>-->
-<!--                    <executions>-->
-<!--                        <execution>-->
-<!--                            <goals>-->
-<!--                                <goal>integration-test</goal>-->
-<!--                                <goal>verify</goal>-->
-<!--                            </goals>-->
-<!--                        </execution>-->
-<!--                    </executions>-->
-<!--                </plugin>-->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
@@ -235,9 +234,9 @@
                     <groupId>net.serenity-bdd.maven.plugins</groupId>
                     <artifactId>serenity-maven-plugin</artifactId>
                     <version>${serenity.maven.version}</version>
-<!--                    <configuration>-->
-<!--                        <tags>${tags}</tags>-->
-<!--                    </configuration>-->
+                    <configuration>
+                        <tags>${tags}</tags>
+                    </configuration>
                     <dependencies>
                         <dependency>
                             <groupId>net.serenity-bdd</groupId>
