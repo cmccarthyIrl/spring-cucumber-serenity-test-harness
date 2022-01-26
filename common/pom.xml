@@ -3,12 +3,6 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <artifactId>common</artifactId>
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-        </dependency>
-    </dependencies>
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>spring-cucumber-serenity-test-harness</artifactId>
@@ -17,4 +11,27 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <version>1.0-SNAPSHOT</version>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-remote-resources-plugin</artifactId>
+                <version>1.7.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>bundle</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <includes>
+                        <include>**/logback.xml</include>
+                        <include>**/serenity.properties</include>
+                        <include>**/serenity.conf</include>
+                    </includes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
