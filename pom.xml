@@ -21,6 +21,8 @@
     </modules>
 
     <properties>
+        <selenium.version>4.1.1</selenium.version>
+        <rest.version>4.2.1</rest.version>
         <activeProfile>prod</activeProfile>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -56,51 +58,9 @@
     </profiles>
 
     <dependencies>
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java</artifactId>
-            <version>7.2.2</version>
-        </dependency>
-        <dependency>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <exclusions>
-                <exclusion>
-                    <artifactId>android-json</artifactId>
-                    <groupId>com.vaadin.external.google</groupId>
-                </exclusion>
-            </exclusions>
-            <groupId>org.springframework.boot</groupId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <artifactId>spring-test</artifactId>
-            <groupId>org.springframework</groupId>
-        </dependency>
-        <dependency>
-            <artifactId>spring-rabbit</artifactId>
-            <groupId>org.springframework.amqp</groupId>
-            <version>2.3.9</version>
-        </dependency>
-<!--        <dependency>-->
-<!--            <artifactId>log4j-api</artifactId>-->
-<!--            <groupId>org.apache.logging.log4j</groupId>-->
-<!--            <version>2.13.1</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <artifactId>log4j-core</artifactId>-->
-<!--            <groupId>org.apache.logging.log4j</groupId>-->
-<!--            <version>2.13.1</version>-->
-<!--        </dependency>-->
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.10</version>
-        </dependency>
         <!--        Serenity Code-->
         <!--        Serenity Code-->
         <!--        Serenity Code-->
-
-
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-core</artifactId>
@@ -112,16 +72,9 @@
             <artifactId>serenity-junit</artifactId>
             <version>3.1.15</version>
         </dependency>
-
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-screenplay</artifactId>
-            <version>${serenity.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>net.serenity-bdd</groupId>
-            <artifactId>serenity-screenplay-rest</artifactId>
             <version>${serenity.version}</version>
             <scope>test</scope>
         </dependency>
@@ -146,11 +99,75 @@
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-rest-assured</artifactId>
             <version>3.1.13</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>io.rest-assured</groupId>
+                    <artifactId>rest-assured</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-spring</artifactId>
             <version>3.1.13</version>
+        </dependency>
+
+        <!--Rest Dependencies-->
+        <!--Rest Dependencies-->
+        <!--Rest Dependencies-->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${rest.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>xml-path</artifactId>
+            <version>${rest.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-path</artifactId>
+            <version>${rest.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>${rest.version}</version>
+        </dependency>
+
+        <!--Test Dependencies-->
+        <!--Test Dependencies-->
+        <!--Test Dependencies-->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.2.3</version>
+        </dependency>
+        <dependency>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>android-json</artifactId>
+                    <groupId>com.vaadin.external.google</groupId>
+                </exclusion>
+            </exclusions>
+            <groupId>org.springframework.boot</groupId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <artifactId>spring-test</artifactId>
+            <groupId>org.springframework</groupId>
+        </dependency>
+        <dependency>
+            <artifactId>spring-rabbit</artifactId>
+            <groupId>org.springframework.amqp</groupId>
+            <version>2.4.2</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.10</version>
         </dependency>
         <dependency>
             <artifactId>commons-io</artifactId>
@@ -217,9 +234,9 @@
                     <groupId>net.serenity-bdd.maven.plugins</groupId>
                     <artifactId>serenity-maven-plugin</artifactId>
                     <version>${serenity.maven.version}</version>
-<!--                    <configuration>-->
-<!--                        <tags>${tags}</tags>-->
-<!--                    </configuration>-->
+                    <configuration>
+                        <tags>${tags}</tags>
+                    </configuration>
                     <dependencies>
                         <dependency>
                             <groupId>net.serenity-bdd</groupId>
