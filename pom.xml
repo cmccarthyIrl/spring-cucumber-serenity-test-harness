@@ -24,10 +24,7 @@
         <selenium.version>4.1.1</selenium.version>
         <rest.version>4.2.1</rest.version>
         <activeProfile>prod</activeProfile>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <serenity.version>3.1.13</serenity.version>
+        <serenity.version>3.1.15</serenity.version>
         <encoding>UTF-8</encoding>
         <tags></tags>
         <webdriver.base.url></webdriver.base.url>
@@ -58,9 +55,7 @@
     </profiles>
 
     <dependencies>
-        <!--        Serenity Code-->
-        <!--        Serenity Code-->
-        <!--        Serenity Code-->
+        <!--        Serenity Dependencies-->
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-core</artifactId>
@@ -70,7 +65,7 @@
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-junit</artifactId>
-            <version>3.1.15</version>
+            <version>${serenity.version}</version>
         </dependency>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
@@ -93,12 +88,17 @@
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-cucumber</artifactId>
-            <version>3.1.13</version>
+            <version>${serenity.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-spring</artifactId>
+            <version>${serenity.version}</version>
         </dependency>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-rest-assured</artifactId>
-            <version>3.1.13</version>
+            <version>${serenity.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>io.rest-assured</groupId>
@@ -106,15 +106,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <dependency>
-            <groupId>net.serenity-bdd</groupId>
-            <artifactId>serenity-spring</artifactId>
-            <version>3.1.13</version>
-        </dependency>
-
-        <!--Rest Dependencies-->
-        <!--Rest Dependencies-->
-        <!--Rest Dependencies-->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
@@ -136,8 +127,6 @@
             <version>${rest.version}</version>
         </dependency>
 
-        <!--Test Dependencies-->
-        <!--Test Dependencies-->
         <!--Test Dependencies-->
         <dependency>
             <groupId>io.cucumber</groupId>
