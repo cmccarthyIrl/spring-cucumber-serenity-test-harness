@@ -26,7 +26,7 @@
                 <version>1.7.0</version>
                 <configuration>
                     <resourceBundles>
-                        <resourceBundle>spring-cucumber-testng-serenity-test-harness:common:1.0-SNAPSHOT
+                        <resourceBundle>spring-cucumber-serenity-test-harness:common:1.0-SNAPSHOT
                         </resourceBundle>
                     </resourceBundles>
                 </configuration>
