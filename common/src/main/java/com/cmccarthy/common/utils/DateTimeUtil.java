@@ -12,7 +12,6 @@ import static java.time.OffsetDateTime.now;
 
 @SuppressWarnings("unused")
 public class DateTimeUtil {
-
     private static final DateTimeFormatter ISO_DATE_TIME_FORMAT = DateTimeFormatter
             .ofPattern("dd/MM/yyyy HH:mm:ss");
 

@@ -7,7 +7,7 @@ import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.DefaultUrl;
 
-@DefaultUrl("https://wikipedia.org")
+@DefaultUrl("https://www.wikipedia.org/")
 public class WikipediaHomePage extends PageObject {
 
     public static final Target COMMONS_LOGO = Target.the("article heading").locatedBy("//a[contains(@href,'commons.wikimedia.org')]");

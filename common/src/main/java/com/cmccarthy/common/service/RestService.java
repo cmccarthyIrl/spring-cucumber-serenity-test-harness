@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class RestService {
-
     @Autowired
     ApplicationProperties applicationProperties;
 

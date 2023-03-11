@@ -1,7 +1,6 @@
 # Spring Cucumber Serenity Test Harness
 
 [![Build Status](https://travis-ci.com/cmccarthyIrl/spring-cucumber-serenity-test-harness.svg?branch=master)](https://travis-ci.com/cmccarthyIrl/spring-cucumber-serenity-test-harness)
-
 # Index
 
 <table> 

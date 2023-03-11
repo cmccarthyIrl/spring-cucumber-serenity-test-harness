@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class HookUtils {
-
     private final Logger log = LoggerFactory.getLogger(HookUtils.class);
 
     public void endOfTest(Scenario scenario) {

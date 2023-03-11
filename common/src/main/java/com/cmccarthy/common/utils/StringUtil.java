@@ -8,7 +8,6 @@ import static org.apache.commons.lang3.RandomStringUtils.random;
 
 @SuppressWarnings("unused")
 public class StringUtil {
-
     private static final Random random = new Random();
 
     public static boolean getRandomBoolean() {

@@ -39,6 +39,16 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>17</source>
+                    <target>17</target>
+                    <compilerArgs>--enable-preview</compilerArgs>
+                    <!--                    <compilerArgs>&#45;&#45;enable-preview</compilerArgs>-->
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 

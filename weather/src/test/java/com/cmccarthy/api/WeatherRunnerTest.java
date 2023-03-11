@@ -12,5 +12,4 @@ import org.junit.runner.RunWith;
         tags = "not @ignore"
 )
 public class WeatherRunnerTest {
-
 }

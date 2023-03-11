@@ -7,7 +7,6 @@ import java.util.Map;
 
 @Service
 public class StepDefinitionDataManager {
-
     private final ThreadLocal<Map<String, Object>> storedObjectMap = new ThreadLocal<>();
 
     public Map<String, Object> getStoredObjectMap() {

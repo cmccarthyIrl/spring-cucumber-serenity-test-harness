@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ApplicationProperties {
-
     @Value("${weather.url.value}")
     private String weatherAppUrl;
     @Value("${wikipedia.url.value}")
